@@ -1,0 +1,7 @@
+{
+  "name": "dores",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
