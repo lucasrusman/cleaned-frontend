@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'dores',
+  appId: 'com.cleaned.app',
+  appName: 'cleaned',
   webDir: 'www',
   bundledWebRuntime: false
 };
