@@ -14,6 +14,14 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./components/inicio/inicio.module').then( m => m.InicioPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./components/auth/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./components/auth/registro/registro.module').then( m => m.RegistroPageModule)
+  },
 
 
 ];
