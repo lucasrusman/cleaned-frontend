@@ -12,4 +12,10 @@ export class InicioPage implements OnInit {
   ngOnInit() {
   }
 
+  goToUserPage(){}
+
+  goToProfessionalPage(){}
+
+  goToLogin(){}
+
 }
