@@ -15,7 +15,15 @@ const routes: Routes = [
   {
     path: 'verificacion',
     loadChildren: () => import('./verificacion/verificacion.module').then( m => m.VerificacionPageModule)
+  },  {
+    path: 'usuarios',
+    loadChildren: () => import('./usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+  },
+  {
+    path: 'profesionales',
+    loadChildren: () => import('./profesionales/profesionales.module').then( m => m.ProfesionalesPageModule)
   }
+
 ];
 
 @NgModule({

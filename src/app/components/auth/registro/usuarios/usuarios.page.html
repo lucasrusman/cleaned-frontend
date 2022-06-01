@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>cleaned</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="content">
+    <ion-grid class="ion-text-center">
+      <ion-row>
+        <ion-col size-sm="12" offset-sm="0">
+          <ion-avatar class="ion-text-center">
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Nombre</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Telefono</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item size="8" offset="2">
+              <ion-label position="floating">Correo Electrónico</ion-label>
+              <ion-input
+                type="email"
+                ngModel
+                name="email"
+                required
+                email
+                #emailCtrl="ngModel"
+              ></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
+              <ion-label> Should be a valid email address. </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input
+                type="password"
+                ngModel
+                name="password"
+                required
+                minlength="6"
+                #passwordCtrl="ngModel"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Confirmar Contraseña</ion-label>
+              <ion-input
+                type="password"
+                ngModel
+                name="password"
+                required
+                minlength="6"
+                #passwordCtrl="ngModel"
+              ></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!passwordCtrl.valid && passwordCtrl.touched" lines="none">
+              <ion-label> Should at least be 6 characters long. </ion-label>
+            </ion-item>
+              <ion-button type="button" color="primary" style="width: 75%;  text-align:center; display: block; margin-bottom: 25px; margin-top: 20px;"> Siguiente </ion-button>
+              <ion-text>¿Ya tienes cuenta? </ion-text><ion-label color="primary" (click)="goToLogin()">Iniciar Sesion</ion-label>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
