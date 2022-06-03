@@ -22,7 +22,15 @@ const routes: Routes = [
   {
     path: 'registro',
     loadChildren: () => import('./components/auth/registro/registro.module').then( m => m.RegistroPageModule)
+  },  {
+    path: 'perfil',
+    loadChildren: () => import('./components/usuarios/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
+  {
+    path: 'editar-perfil',
+    loadChildren: () => import('./components/usuarios/editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
+  },
+
 
 
 
