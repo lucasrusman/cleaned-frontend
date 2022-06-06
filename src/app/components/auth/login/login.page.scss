@@ -7,25 +7,32 @@ ion-grid {
     align-items: center;
     align-content: center;
   }
-  ion-button{
+  ion-button {
     width: 80%;
   }
-
+  ion-checkbox {
+    margin-right: 0.5rem;
+  }
+  .parte_inferior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
 }
 
-ion-list{
+ion-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 10%;
   align-items: center;
   gap: 1rem;
-  ion-item{
+  ion-item {
     width: 100%;
-    ion-input{
+    ion-input {
       height: 15px;
       width: 50%;
     }
   }
 }
-
