@@ -14,6 +14,8 @@ import { AuthResponseData } from 'src/app/interfaces/AuthResponseData';
 export class LoginPage implements OnInit {
   isLoading = false;
   isLogin = true;
+  showPassword = false;
+  passwordToggleIcon = 'eye';
 
   constructor(
     //private authService: AuthService,
@@ -24,13 +26,21 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {}
 
+  togglePassword(): void{
+    this.showPassword = !this.showPassword;
+    if (this.passwordToggleIcon === 'eye') {
+      this.passwordToggleIcon = 'eye-off';
+    } else {
+      this.passwordToggleIcon = 'eye';
+    }
+  }
   authenticate(email: string, password: string) {
     this.isLoading = true;
     this.loadingCtrl.create({ keyboardClose: true, message: 'Logging in...' }).then(loadingEl => {
       loadingEl.present();
       let authObs: Observable<AuthResponseData>;
       if (this.isLogin) {
-       // authObs = this.authService.login(email, password);
+        // authObs = this.authService.login(email, password);
       } else {
         //authObs = this.authService.signUp(email, password);
       }
@@ -70,6 +80,9 @@ export class LoginPage implements OnInit {
     this.authenticate(email, password);
     form.reset();
   }
+
+  goToRegisterPage() { };
+
   private showAlert(message: string) {
     this.alertCtrl
       .create({
@@ -81,4 +94,5 @@ export class LoginPage implements OnInit {
         alertEl.present();
       });
   }
+
 }

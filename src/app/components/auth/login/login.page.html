@@ -2,10 +2,12 @@
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="content">
     <ion-grid class="ion-text-center">
       <ion-row>
+        <ion-col>
+          <ion-text style="font-family: Montserrat; font-size: 50px; color: var(--ion-color-primary);font-weight: 800;">cleaned</ion-text>
+        </ion-col>
         <ion-col size-sm="12" offset-sm="0">
           <ion-list>
             <ion-item size="8" offset="2">
-              <ion-label position="floating">Correo Electrónico</ion-label>
               <ion-input
                 type="email"
                 ngModel
@@ -13,21 +15,23 @@
                 required
                 email
                 #emailCtrl="ngModel"
+                placeholder="Correo Electrónico"
               ></ion-input>
             </ion-item>
             <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
               <ion-label> Should be a valid email address. </ion-label>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Contraseña</ion-label>
               <ion-input
-                type="password"
+                [type]="showPassword ? 'text' : 'password' "
                 ngModel
                 name="password"
                 required
                 minlength="6"
                 #passwordCtrl="ngModel"
+                placeholder="Contraseña"
               ></ion-input>
+              <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon>
             </ion-item>
             <ion-item *ngIf="!passwordCtrl.valid && passwordCtrl.touched" lines="none">
               <ion-label> Should at least be 6 characters long. </ion-label>
@@ -39,14 +43,14 @@
           <ion-label>Recuerdame</ion-label>
         </ion-item>
         <ion-col>
-          <ion-text>¿Olvidaste tu contraseña?</ion-text>
+          <ion-text color="secondary">¿Olvidaste tu contraseña?</ion-text>
         </ion-col>
         <ion-col>
           <ion-button type="button" color="primary"> Ingresar </ion-button>
         </ion-col>
         <ion-col>
           <ion-text>¿Aun no tienes cuenta? </ion-text>
-          <ion-text>Registrate</ion-text>
+          <ion-text color="secondary" (click)="goToRegisterPage()">Registrate</ion-text>
         </ion-col>
       </ion-row>
     </ion-grid>
