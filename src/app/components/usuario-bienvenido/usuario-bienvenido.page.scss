@@ -6,19 +6,41 @@ ion-grid {
     justify-content: center;
     align-items: center;
     align-content: center;
-  }
-  ion-col {
-    .buttons {
+    ion-col {
       display: flex;
       justify-content: center;
-    }
-    ion-img {
-      width: 100%;
-    }
-    ion-text{
-      display: flex;
-      justify-content: center;
-      font-family: Arial, Helvetica, sans-serif;
+      gap: 1rem;
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+      ion-img {
+        width: 100%;
+      }
+      ion-text {
+        display: flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+      ion-icon {
+        color: #fff;
+        align-self: end;
+        padding-right: 12.5%;
+        margin-bottom: -2%;
+        width: 25px;
+        height: 25px;
+      }
+      ion-avatar {
+        border: 5px solid grey;
+        align-self: center;
+        height: 125px;
+        width: 125px;
+      }
     }
   }
+}
+
+.avatar {
+  margin-bottom: 5vh;
 }
