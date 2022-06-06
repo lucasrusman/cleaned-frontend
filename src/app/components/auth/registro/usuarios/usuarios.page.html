@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>cleaned</ion-title>
+    <ion-title class="ion-text-center">cleaned</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,19 +10,16 @@
       <ion-row>
         <ion-col size-sm="12" offset-sm="0">
           <ion-avatar class="ion-text-center">
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            <img src="../../../../../assets/images/agregar.png" />
           </ion-avatar>
           <ion-list>
             <ion-item>
-              <ion-label position="floating">Nombre</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" placeholder="Nombre"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Telefono</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" placeholder="Telefono"></ion-input>
             </ion-item>
             <ion-item size="8" offset="2">
-              <ion-label position="floating">Correo Electrónico</ion-label>
               <ion-input
                 type="email"
                 ngModel
@@ -30,39 +27,51 @@
                 required
                 email
                 #emailCtrl="ngModel"
+                placeholder="Correo Electrónico"
               ></ion-input>
             </ion-item>
             <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
               <ion-label> Should be a valid email address. </ion-label>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Contraseña</ion-label>
               <ion-input
-                type="password"
+                [type]="showPassword ? 'text' : 'password' "
                 ngModel
                 name="password"
                 required
                 minlength="6"
                 #passwordCtrl="ngModel"
+                placeholder="Contraseña"
               ></ion-input>
+              <ion-icon
+                slot="end"
+                [name]="passwordToggleIcon"
+                (click)="togglePassword()"
+              ></ion-icon>
             </ion-item>
             <ion-item>
-              <ion-label position="floating">Confirmar Contraseña</ion-label>
               <ion-input
-                type="password"
+                [type]="showPassword ? 'text' : 'password' "
                 ngModel
                 name="password"
                 required
                 minlength="6"
                 #passwordCtrl="ngModel"
+                placeholder="Confirmar Contraseña"
               ></ion-input>
+              <ion-icon
+                slot="end"
+                [name]="passwordToggleIcon"
+                (click)="togglePassword()"
+              ></ion-icon>
             </ion-item>
             <ion-item *ngIf="!passwordCtrl.valid && passwordCtrl.touched" lines="none">
-              <ion-label> Should at least be 6 characters long. </ion-label>
+              <ion-label>Minimo 6 caracteres</ion-label>
             </ion-item>
-              <ion-button type="button" color="primary"> Siguiente </ion-button>
-              <ion-text>¿Ya tienes cuenta? </ion-text><ion-label color="primary" (click)="goToLogin()">Iniciar Sesion</ion-label>
+            <ion-button type="button" color="primary"> Siguiente </ion-button>
           </ion-list>
+          <ion-text>¿Ya tienes cuenta? </ion-text
+          ><ion-label color="primary" (click)="goToLogin()">Iniciar Sesion</ion-label>
         </ion-col>
       </ion-row>
     </ion-grid>
