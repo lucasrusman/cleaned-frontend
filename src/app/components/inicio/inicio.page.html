@@ -4,16 +4,14 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="2" offset="5">
-        <ion-thumbnail>
-          <img src="">
-        </ion-thumbnail>
+      <ion-col size="9.5" offset="1.5" class="logo">
+        <ion-text style="font-family: Montserrat; font-size: 50px; color: var(--ion-color-primary);font-weight: 800;">cleaned</ion-text>
       </ion-col>
-      <ion-col size="6" offset="3" class="ion-text-center">
+      <ion-col class="ion-text-center">
         <ion-button color="primary" (click)="goToUserPage()">Quiero contratar</ion-button>
       </ion-col>
-      <ion-col size="6" offset="3" class="ion-text-center ion-margin-left">
-        <ion-button color="tertiary"(click)="goToProfessionalPage()">Quiero trabajar</ion-button>
+      <ion-col class="ion-text-center ion-margin-left" id="btn-inferior">
+        <ion-button color="primary"(click)="goToProfessionalPage()" fill="outline">Quiero trabajar</ion-button>
       </ion-col>
       <ion-col class="ion-text-center">
         <ion-label color="primary" class="ion-text-center" (click)="goToLogin()">¿Ya tienes cuenta?</ion-label>
@@ -21,16 +19,14 @@
       <ion-col class="ion-text-center">
         <p>Ingresa a través de tus redes sociales</p>
       </ion-col>
-      <!-- <ion-col>
+      <ion-col class="redes">
         <ion-avatar>
-          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          <img src="../../../assets/images/facebook.png">
+        </ion-avatar>
+        <ion-avatar>
+          <img src="../../../assets/images/google.png" style="object-fit:cover;">
         </ion-avatar>
       </ion-col>
-      <ion-col>
-        <ion-avatar>
-          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-        </ion-avatar>
-      </ion-col> -->
     </ion-row>
   </ion-grid>
 </ion-content>
