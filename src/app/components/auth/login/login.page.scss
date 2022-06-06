@@ -13,3 +13,19 @@ ion-grid {
 
 }
 
+ion-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+  align-items: center;
+  gap: 1rem;
+  ion-item{
+    width: 100%;
+    ion-input{
+      height: 15px;
+      width: 50%;
+    }
+  }
+}
+
