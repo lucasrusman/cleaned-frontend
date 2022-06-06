@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'editar-perfil',
     loadChildren: () => import('./components/usuarios/editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
   },
+  {
+    path: 'usuario-bienvenido',
+    loadChildren: () => import('./components/usuario-bienvenido/usuario-bienvenido.module').then( m => m.UsuarioBienvenidoPageModule)
+  },
 
 
 
