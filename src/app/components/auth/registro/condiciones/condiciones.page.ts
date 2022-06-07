@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-condiciones',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CondicionesPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+
+  goToRegisterPage() {
+    this.router.navigateByUrl('/registro/usuarios');
+  };
 
 }

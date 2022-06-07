@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editar-perfil.page.scss'],
 })
 export class EditarPerfilPage implements OnInit {
+  nombre = 'Christian Russo';
+  email = 'crusso@gmail.com';
+  telefono = 1112341234;
+
 
   constructor() { }
 

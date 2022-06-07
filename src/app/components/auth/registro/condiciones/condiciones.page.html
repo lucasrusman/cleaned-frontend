@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>condiciones</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <ion-list>
+    <ion-item lines="none">
+      <ion-text style="font-family: Montserrat; font-size: 50px; color: var(--ion-color-primary);font-weight: 800;">cleaned</ion-text>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Condiciones de Registro</ion-label>
+      <ion-text class="ion-text-center text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias aperiam magni reprehenderit doloremque praesentium id et! Ab architecto fugit delectus unde commodi saepe reiciendis quis nulla necessitatibus pariatur consequuntur molestias praesentium placeat, ea voluptatibus harum?</ion-text>
+    </ion-item>
+    <ion-item lines="none" class="accept">
+      <ion-label>Acepto las condiciones</ion-label><ion-checkbox color="primary"></ion-checkbox>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button color="primary" (click)="goToRegisterPage()">Siguiente</ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-inferrable-types */
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -13,9 +14,13 @@ export class PerfilPage implements OnInit {
   telefono: number = 1112341234;
 
 
-  constructor() { }
+  constructor(private readonly router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToEditProfile(){
+    this.router.navigateByUrl('/editar-perfil');
   }
 
 }

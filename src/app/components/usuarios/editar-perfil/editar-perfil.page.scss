@@ -1,0 +1,39 @@
+ion-header{
+  background-color: var(--ion-color-tertiary);
+  ion-toolbar{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+.foto{
+  background-color: var(--ion-color-tertiary);
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  margin: auto;
+  ion-avatar{
+    border: 5px solid grey;
+    align-self: center;
+    height: 125px;
+    width: 125px;
+  }
+}
+
+.datos{
+  height: calc(55vh - 44px);
+  text-align: center;
+  ion-item{
+    margin-left: 40px;
+    padding-top: 40px;
+    ion-icon{
+      margin-right: 10px;
+    }
+  }
+  ion-button{
+    width: 50%;
+    margin-top: 5%;
+  }
+}

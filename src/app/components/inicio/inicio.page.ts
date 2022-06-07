@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -7,15 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  constructor( private readonly router: Router) { }
 
   ngOnInit() {
   }
 
-  goToUserPage(){}
+  goToUserPage(){
+    this.router.navigateByUrl('/registro/usuarios');
+  }
 
-  goToProfessionalPage(){}
+  goToProfessionalPage(){
+    this.router.navigateByUrl('/registro/profesionales');
+  }
 
-  goToLogin(){}
+  goToLogin(){
+    this.router.navigateByUrl('/login');
+  }
 
 }
