@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-family: Montserrat; font-size: 20px; color: #fff;font-weight: 800;">cleaned</ion-title>
+    <ion-buttons slot="primary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="foto">
+    <ion-icon name="pencil" (click)="goToEditProfile()"></ion-icon>
+    <ion-avatar>
+      <img src="../../../../assets/images/fotoejemplo.jpg" class="imagen">
+    </ion-avatar>
+    <p style="text-align: center; color:white;">5.0</p>
+    <div class="ec-stars-wrapper">
+      <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
+      <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
+      <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
+      <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
+      <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
+    </div>
+  </div>
+  <div class="datos">
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label>{{nombre}}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        <ion-label>{{fechaNacimiento}}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-label>{{telefono}}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="location-outline"></ion-icon>
+        <ion-label>{{direccion}}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-label>{{email}}</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="cash-outline"></ion-icon>
+        <ion-label>{{valorHora}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
