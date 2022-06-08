@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title
+      class="ion-text-center"
+      style="font-family: Montserrat; font-size: 20px; font-weight: 800"
+      >cleaned</ion-title
+    >
+    <ion-buttons slot="primary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" offset="4">
+        <ion-avatar class="avatar">
+          <ion-img
+            src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+          ></ion-img>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="9" offset="1.5">
+        <ion-text color="primary"> Ingresa la direccion del lugar a recibir el servicio </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="navigate-outline" style="width: 50px; height:50px;"></ion-icon>
+      </ion-col>
+      <ion-col size="8" offset="2">
+        <ion-item>
+          <ion-input autocomplete="on"></ion-input>
+        </ion-item>
+        <!-- parametros que van dentro de app-location-picker -->
+        <!-- [showPreview]="form.get('location').value" -->
+        <!-- (locationPick)="onLocationPicked($event)" -->
+      </ion-col>
+      <ion-col>
+        <ion-button>Cancelar</ion-button>
+        <ion-button>Siguiente</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
