@@ -47,14 +47,14 @@ ion-header{
 	font-size: 0;
   display: flex;
   justify-content: center;
-  align-content: end;
+  align-content: flex-end;
 
   .ec-stars-wrapper a {
     text-decoration: none;
     display: inline-block;
     font-size: 32px;
     font-size: 2rem;
-    align-self: end;
+    align-self:flex-end;
     color: #fff;
   }
 

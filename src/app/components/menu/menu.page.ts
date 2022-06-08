@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPage implements OnInit {
 
+  rol = 'Usuario' || 'Profesional';
+
   constructor() { }
 
   ngOnInit() {
+    // const rol = localStorage.getItem("rol");
   }
 
 }

@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   },
   {
@@ -50,7 +50,8 @@ const routes: Routes = [
     path: 'servicios',
     loadChildren: () =>
       import('./components/usuarios/servicios/servicios.module').then(m => m.ServiciosPageModule)
-  },  {
+  },
+  {
     path: 'menu',
     loadChildren: () => import('./components/menu/menu.module').then( m => m.MenuPageModule)
   }
