@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/perfil"></ion-back-button>
+      <ion-back-button defaultHref="profesionales/perfil"></ion-back-button>
     </ion-buttons>
     <ion-title style="font-family: Montserrat; font-size: 20px; color: #fff;font-weight: 800;">cleaned</ion-title>
     <ion-buttons slot="primary">
@@ -23,8 +23,16 @@
         <ion-input type="text" placeholder="Nombre" [(ngModel)]="nombre"></ion-input>
       </ion-item>
       <ion-item lines="none">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        <ion-input type="text" placeholder="Fecha de Nacimiento" [(ngModel)]="fechaNacimiento"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
         <ion-icon name="call-outline"></ion-icon>
         <ion-input type="text" placeholder="Telefono" [(ngModel)]="telefono"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="location-outline"></ion-icon>
+        <ion-input type="text" placeholder="Direccion" [(ngModel)]="direccion"></ion-input>
       </ion-item>
       <ion-item lines="none">
         <ion-icon name="mail-outline"></ion-icon>
@@ -38,6 +46,10 @@
           placeholder="Correo Electrónico"
           [(ngModel)]="email"
         ></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="cash-outline"></ion-icon>
+        <ion-input type="number" placeholder="Valor Hora" [(ngModel)]="valorHora"></ion-input>
       </ion-item>
       <ion-button type="button" color="primary"> Siguiente </ion-button>
     </ion-list>

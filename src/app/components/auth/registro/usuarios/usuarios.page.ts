@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -9,12 +10,14 @@ export class UsuariosPage implements OnInit {
   showPassword = false;
   passwordToggleIcon = 'eye';
 
-  constructor() { }
+  constructor(private readonly router: Router) { }
 
   ngOnInit() {
   }
 
-  goToLogin(){}
+  goToLogin(){
+    this.router.navigateByUrl('/login');
+  }
 
   togglePassword(): void{
     this.showPassword = !this.showPassword;

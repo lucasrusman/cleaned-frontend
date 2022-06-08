@@ -26,6 +26,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {}
 
+  goToMainPage(){
+    this.router.navigateByUrl('/perfil');
+  }
+
   togglePassword(): void{
     this.showPassword = !this.showPassword;
     if (this.passwordToggleIcon === 'eye') {
@@ -81,7 +85,9 @@ export class LoginPage implements OnInit {
     form.reset();
   }
 
-  goToRegisterPage() { };
+  goToRegisterPage() {
+    this.router.navigateByUrl('/registro/profesionales');
+  };
 
   private showAlert(message: string) {
     this.alertCtrl

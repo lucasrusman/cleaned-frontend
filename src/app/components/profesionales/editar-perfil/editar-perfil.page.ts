@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarPerfilPage implements OnInit {
   nombre = 'Christian Russo';
+  fechaNacimiento = '1234';
   email = 'crusso@gmail.com';
+  direccion = 'Jose Hernandez 1283';
   telefono = 1112341234;
-
+  valorHora = 100;
 
   constructor() { }
 

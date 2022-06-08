@@ -1,0 +1,28 @@
+ion-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 1rem;
+  ion-item{
+    width: 100%;
+    ion-text{
+      margin: auto;
+    }
+    .text{
+      border: 1px solid var(--ion-color-tertiary);
+      border-radius: 20px;
+      padding: 10px;
+      margin-right: 5%;
+    }
+    ion-button{
+      margin: auto;
+      width: 50%;
+      height: 35px;
+    }
+  }
+  .accept{
+    width: 70%;
+  }
+}
