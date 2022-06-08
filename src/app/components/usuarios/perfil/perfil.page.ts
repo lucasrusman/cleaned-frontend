@@ -20,7 +20,7 @@ export class PerfilPage implements OnInit {
   }
 
   goToEditProfile(){
-    this.router.navigateByUrl('/editar-perfil');
+    this.router.navigateByUrl('/usuarios/editar-perfil');
   }
 
 }
