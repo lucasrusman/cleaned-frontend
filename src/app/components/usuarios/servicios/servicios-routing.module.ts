@@ -44,10 +44,6 @@ const routes: Routes = [
     path: 'confirmar-visita',
     loadChildren: () => import('./confirmar-visita/confirmar-visita.module').then( m => m.ConfirmarVisitaPageModule)
   },
-  {
-    path: 'evaluacion-visita',
-    loadChildren: () => import('./evaluacion-visita/evaluacion-visita.module').then( m => m.EvaluacionVisitaPageModule)
-  },
 ];
 
 @NgModule({
